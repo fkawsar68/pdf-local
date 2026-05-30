@@ -373,16 +373,30 @@
     <div class="modal" id="license-modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 style="margin: 0;">Activate Pro Version</h3>
+                <h3 style="margin: 0; font-size: 1.25rem;">Pro Upgrade Activation</h3>
                 <button class="close-modal" onclick="closeLicenseModal()">&times;</button>
             </div>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">
-                Enter your Lemon Squeezy license key to unlock unlimited file merges and remove file size restrictions.
-            </p>
-            <div class="form-group">
-                <label for="license-key-input">License Key</label>
+            
+            <!-- PRO BENEFIT CARD & PURCHASE CTA -->
+            <div style="background-color: #f8fafc; border: 1px solid var(--border); padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                <p style="font-weight: 700; font-size: 1.1rem; margin-bottom: 2px; color: #0369a1; text-align: center;">Pro Lifetime Upgrade — $10.00</p>
+                <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-bottom: 15px;">One-time payment. Lifetime access.</p>
+                
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; margin-bottom: 15px; display: flex; flex-direction: column; gap: 6px; padding-left: 10px;">
+                    <li>✅ <strong>Unlimited file merges</strong> (removes 2-file limit)</li>
+                    <li>✅ <strong>No file size restrictions</strong> (process files over 10MB)</li>
+                    <li>✅ <strong>Lifetime updates</strong> and premium features</li>
+                </ul>
+                
+                <!-- Replace 'YOUR_LEMON_SQUEEZY_CHECKOUT_URL' with your actual product link later -->
+                <a href="YOUR_LEMON_SQUEEZY_CHECKOUT_URL" target="_blank" class="btn" style="text-decoration: none; display: block; text-align: center;">Buy Pro License Key</a>
+            </div>
+
+            <!-- KEY INPUT FOR ALREADY PURCHASED CUSTOMERS -->
+            <div class="form-group" style="border-top: 1px solid var(--border); padding-top: 15px;">
+                <label for="license-key-input" style="font-weight: 600;">Already purchased? Enter License Key</label>
                 <input type="text" id="license-key-input" placeholder="Paste your LS_... license key">
-                <button class="btn" style="width: 100%; margin-top: 15px;" onclick="activateLicenseKey()">Verify & Activate</button>
+                <button class="btn" style="width: 100%; margin-top: 10px;" onclick="activateLicenseKey()">Verify & Activate</button>
                 <div id="license-status-msg" style="font-size: 0.8rem; margin-top: 10px; color: var(--text-muted); text-align: center;">
                     Status: No active license verified.
                 </div>
